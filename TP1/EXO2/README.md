@@ -5,7 +5,7 @@
 # Commande d'execution
 ![commande d'execution](../../capture/TP1/EXO2/exo2_execution.png)  
 
-# Installation de la dépendence Exrepss Generator et sa Configuration
+# Installation de la dépendence Express Generator et sa Configuration
 ![Installation de la dépendence express generator et sa configuration](../../capture/TP1/EXO2/exo2_instll&conf.png)  
 
 # Arborescence du projet générée avec la commande de Express Generator
