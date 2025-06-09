@@ -21,7 +21,7 @@ avant de supprimer la tache
 ![Affichage de l'image](../../capture/TP2/EXO1/AVANT_delete.png)  
 
 après avoir supprimer la tache
-![Affichage de l'image](../../capture/TP2/EXO1/AFTER_delete.png)  
+![Affichage de l'image](../../capture/TP2/EXO1/AFTER_DELETE.png)  
 
 ## 📝 Description  
 
