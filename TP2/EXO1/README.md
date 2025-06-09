@@ -23,6 +23,11 @@ avant de supprimer la tache
 après avoir supprimer la tache
 ![Affichage de l'image](../../capture/TP2/EXO1/AFTER_DELETE.png)  
 
+## Remarque sur la Suppression:
+
+entre la première capture et la deuxième capture la tache 2 a été supprimée
+
+
 ## 📝 Description  
 
 Exercice 1: Créer un ensemble de routes pour une API de gestion de tâches
