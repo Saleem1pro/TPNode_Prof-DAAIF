@@ -28,8 +28,8 @@ après avoir supprimer la tache
 Exercice 1: Créer un ensemble de routes pour une API de gestion de tâches
 Créez une API RESTful pour gérer une liste de tâches avec les routes suivantes :
 
-GET /tasks - Récupérer toutes les tâches
-GET /tasks/:id - Récupérer une tâche spécifique
+GET /tasks - Récupérer toutes les tâches 
+GET /tasks/:id - Récupérer une tâche spécifique \n
 POST /tasks - Créer une nouvelle tâche
 PUT /tasks/:id - Mettre à jour une tâche existante
 DELETE /tasks/:id - Supprimer une tâche
