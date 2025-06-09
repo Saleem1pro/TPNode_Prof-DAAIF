@@ -4,24 +4,24 @@
 ## 📸 Capture d'écran  :
 
 # GET /tasks - Récupérer toutes les tâches
-![commande d'execution](../../capture/TP2/EXO2/accueil.png) 
+![commande d'execution](../../capture/TP2/EXO1/accueil.png) 
 
 # GET /tasks/:id - Récupérer une tâche spécifique
-![Affichage de sur la route principale HelloWorld](../../capture/TP2/EXO2/recuperer_une_tache.png)  
+![Affichage de l'image](../../capture/TP2/EXO1/recuperer_une_tache.png)  
 
 # POST / - Créer une nouvelle tâche
-![Affichage de la date actuelle sur la route /date](../../capture/TP2/EXO2/accueil.png)  
+![Affichage de l'image](../../capture/TP2/EXO1/accueil.png)  
 
 # PUT /tasks/edit/:id - Mettre à jour une tâche existante
-![Affichage de la date actuelle sur la route /date](../../capture/TP2/EXO2/edit_task.png)  
+![Affichage de l'image](../../capture/TP2/EXO1/edit_task.png)  
 
 # DELETE /tasks/:id - Supprimer une tâche
 
 avant de supprimer la tache
-![Affichage de la date actuelle sur la route /date](../../capture/TP2/EXO2/AVANT_delete.png)  
+![Affichage de l'image](../../capture/TP2/EXO1/AVANT_delete.png)  
 
 après avoir supprimer la tache
-![Affichage de la date actuelle sur la route /date](../../capture/TP2/EXO2/AFTER_delete.png)  
+![Affichage de l'image](../../capture/TP2/EXO1/AFTER_delete.png)  
 
 ## 📝 Description  
 
