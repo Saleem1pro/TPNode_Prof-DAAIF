@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erreur <%= error.status %></title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .error-container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    
+    .error-code {
+      font-size: 6rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+    .error-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    .error-message {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Couleurs dynamiques en fonction du code d'erreur */
+    .status-2xx { color: #4CAF50; }
+    .status-3xx { color: #2196F3; }
+    .status-4xx { color: #FF9800; }
+    .status-5xx { color: #f44336; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="error-container">
+      <div class="error-code status-<%= Math.floor(error.status/100) %>xx">
+        <%= error.status %>
+      </div>
+      
+      <h1 class="error-title"><%= error.message %></h1>
+      
+      <p class="error-message">
+        <% if (error.status === 404) { %>
+          La ressource que vous cherchez n'a pas été trouvée.
+        <% } else if (error.status === 500) { %>
+          Une erreur interne s'est produite sur le serveur.
+        <% } else if (error.status === 400) { %>
+          Votre requête contient des données invalides.
+        <% } else if (error.status === 401) { %>
+          Vous devez être authentifié pour accéder à cette ressource.
+        <% } else { %>
+          Une erreur s'est produite lors du traitement de votre requête.
+        <% } %>
+      </p>
+      
+      <div class="actions">
+        <a href="/" class="btn">Retour à l'accueil</a>
+        <a href="/status-codes" class="btn btn-info">Voir les codes HTTP</a>
+      </div>
+      
+      <% if (process.env.NODE_ENV === 'development') { %>
+        <div class="error-details" style="margin-top: 30px; text-align: left; max-width: 800px; margin: 30px auto; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+          <h3>Détails de l'erreur (développement)</h3>
+          <pre style="overflow: auto; margin-top: 15px; font-family: monospace;"><%= error.stack %></pre>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codes de Statut HTTP</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Codes de Statut HTTP</h1>
+      <p>Visualisation des codes de réponse HTTP avec leurs couleurs associées</p>
+    </header>
+    
+    <main class="status-section">
+      <h2 class="section-title">Codes 2xx - Succès</h2>
+      <div class="status-grid">
+        <div class="status-card status-2xx">
+          <div class="status-header">200 OK</div>
+          <div class="status-body">
+            <div class="status-code">200</div>
+            <div class="status-text">OK</div>
+            <div class="status-description">La requête a réussi</div>
+          </div>
+        </div>
+        
+        <div class="status-card status-2xx">
+          <div class="status-header">201 Created</div>
+          <div class="status-body">
+            <div class="status-code">201</div>
+            <div class="status-text">Created</div>
+            <div class="status-description">Ressource créée avec succès</div>
+          </div>
+        </div>
+        
+        <div class="status-card status-2xx">
+          <div class="status-header">204 No Content</div>
+          <div class="status-body">
+            <div class="status-code">204</div>
+            <div class="status-text">No Content</div>
+            <div class="status-description">Pas de contenu à retourner</div>
+          </div>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Codes 3xx - Redirection</h2>
+      <div class="status-grid">
+        <div class="status-card status-3xx">
+          <div class="status-header">301 Moved Permanently</div>
+          <div class="status-body">
+            <div class="status-code">301</div>
+            <div class="status-text">Moved Permanently</div>
+            <div class="status-description">Ressource déplacée définitivement</div>
+          </div>
+        </div>
+        
+        <div class="status-card status-3xx">
+          <div class="status-header">304 Not Modified</div>
+          <div class="status-body">
+            <div class="status-code">304</div>
+            <div class="status-text">Not Modified</div>
+            <div class="status-description">Ressource non modifiée</div>
+          </div>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Codes 4xx - Erreur client</h2>
+      <div class="status-grid">
+        <div class="status-card status-4xx">
+          <div class="status-header">400 Bad Request</div>
+          <div class="status-body">
+            <div class="status-code">400</div>
+            <div class="status-text">Bad Request</div>
+            <div class="status-description">Requête mal formée</div>
+          </div>
+        </div>
+        
+        <div class="status-card status-4xx">
+          <div class="status-header">401 Unauthorized</div>
+          <div class="status-body">
+            <div class="status-code">401</div>
+            <div class="status-text">Unauthorized</div>
+            <div class="status-description">Authentification requise</div>
+          </div>
+        </div>
+        
+        <div class="status-card status-4xx">
+          <div class="status-header">403 Forbidden</div>
+          <div class="status-body">
+            <div class="status-code">403</div>
+            <div class="status-text">Forbidden</div>
+            <div class="status-description">Accès refusé</div>
+          </div>
+        </div>
+        
+        <div class="status-card status-4xx">
+          <div class="status-header">404 Not Found</div>
+          <div class="status-body">
+            <div class="status-code">404</div>
+            <div class="status-text">Not Found</div>
+            <div class="status-description">Ressource introuvable</div>
+          </div>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Codes 5xx - Erreur serveur</h2>
+      <div class="status-grid">
+        <div class="status-card status-5xx">
+          <div class="status-header">500 Internal Server Error</div>
+          <div class="status-body">
+            <div class="status-code">500</div>
+            <div class="status-text">Internal Server Error</div>
+            <div class="status-description">Erreur interne du serveur</div>
+          </div>
+        </div>
+        
+        <div class="status-card status-5xx">
+          <div class="status-header">502 Bad Gateway</div>
+          <div class="status-body">
+            <div class="status-code">502</div>
+            <div class="status-text">Bad Gateway</div>
+            <div class="status-description">Mauvaise passerelle</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <div class="actions">
+      <a href="/" class="btn">Retour à l'accueil</a>
+    </div>
+  </div>
+</body>
+</html>
