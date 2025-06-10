@@ -4,11 +4,11 @@ Ce TP vise à maîtriser le routage avec ExpressJs.
 
 ## Exercices :
 - **Exo1** : Créer un ensemble de routes pour une API de gestion de tâches : 
-  🔗 [Détails de l'exercice 1](./EXO1/README.md)  
+  🔗 [Détails de l'exercice 1](./EXO1)  
 - **Exo2** : Implémenter des routes paramétrées 
-  🔗 [Détails de l'exercice 2](./EXO2/README.md)  
+  🔗 [Détails de l'exercice 2](./EXO2)  
 - **Exo3** : Organiser une application avec des routeurs modulaires  
-  🔗 [Détails de l'exercice 1](./EXO3/README.md)  
+  🔗 [Détails de l'exercice 1](./EXO3)  
 ---
 
 ## Instructions Générales :
