@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie d'images</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Galerie d'images</h1>
+        <a href="/" class="btn">Uploader plus d'images</a>
+        <div class="gallery" id="galleryContainer">
+            <!-- Les images seront chargées via JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        fetch('/api/images')
+            .then(response => response.json())
+            .then(images => {
+                const gallery = document.getElementById('galleryContainer');
+                
+                if (images.length === 0) {
+                    gallery.innerHTML = '<p class="empty">Aucune image disponible</p>';
+                    return;
+                }
+                
+                gallery.innerHTML = images.map(image => `
+                    <div class="gallery-item">
+                        <img src="${image}" alt="Image uploadée">
+                    </div>
+                `).join('');
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                document.getElementById('galleryContainer').innerHTML = 
+                    '<p class="error">Erreur de chargement des images</p>';
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a93cb, #a4bfef);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.upload-area {
+    border: 3px dashed #3498db;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin: 25px 0;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.upload-area.active {
+    background-color: #e3f2fd;
+    border-color: #2980b9;
+}
+
+.upload-area .icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.upload-area p {
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+.info {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin: 10px 0 20px;
+}
+
+.btn {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-link {
+    display: block;
+    margin-top: 20px;
+    color: #3498db;
+    font-weight: 500;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    aspect-ratio: 1/1;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.empty, .error {
+    padding: 30px;
+    color: #7f8c8d;
+    font-size: 18px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload d'images</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload d'images</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="upload-area" id="uploadArea">
+                <i class="icon">📁</i>
+                <p>Glissez-déposez votre image ici</p>
+                <p>ou</p>
+                <label for="fileInput" class="btn">Sélectionner un fichier</label>
+                <input type="file" id="fileInput" name="image" accept="image/*" required>
+            </div>
+            <p class="info">Formats acceptés: JPEG, PNG, GIF | Max: 5MB</p>
+            <button type="submit" class="btn">Uploader</button>
+        </form>
+        <a href="/gallery" class="gallery-link">Voir la galerie</a>
+    </div>
+
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('active');
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('active');
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('active');
+            
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                uploadArea.querySelector('p').textContent = 'Fichier prêt: ' + e.dataTransfer.files[0].name;
+            }
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length) {
+                uploadArea.querySelector('p').textContent = 'Fichier prêt: ' + e.target.files[0].name;
+            }
+        });
+    </script>
+</body>
+</html>
