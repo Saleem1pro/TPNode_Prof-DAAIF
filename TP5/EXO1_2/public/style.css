@@ -1,0 +1,247 @@
+:root {
+  --success-light: #e8f5e9;
+  --success-dark: #1b5e20;
+  --success: #4caf50;
+  
+  --info-light: #e3f2fd;
+  --info-dark: #0d47a1;
+  --info: #2196f3;
+  
+  --warning-light: #fff3e0;
+  --warning-dark: #e65100;
+  --warning: #ff9800;
+  
+  --danger-light: #ffebee;
+  --danger-dark: #b71c1c;
+  --danger: #f44336;
+  
+  --neutral-light: #f5f5f5;
+  --neutral-dark: #212121;
+  --neutral: #9e9e9e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+header {
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.status-section {
+  padding: 30px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.status-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.status-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.status-header {
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.status-body {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.status-code {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.status-text {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.status-description {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Couleurs des statuts */
+.status-2xx {
+  background-color: var(--success-light);
+  color: var(--success-dark);
+}
+
+.status-3xx {
+  background-color: var(--info-light);
+  color: var(--info-dark);
+}
+
+.status-4xx {
+  background-color: var(--warning-light);
+  color: var(--warning-dark);
+}
+
+.status-5xx {
+  background-color: var(--danger-light);
+  color: var(--danger-dark);
+}
+
+.status-other {
+  background-color: var(--neutral-light);
+  color: var(--neutral-dark);
+}
+
+/* Page d'erreur */
+.error-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.error-code {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.error-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Boutons */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(to right, #6e8efb, #a777e3);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+  background: linear-gradient(to right, #4CAF50, #2E7D32);
+}
+
+.btn-warning {
+  background: linear-gradient(to right, #FF9800, #EF6C00);
+}
+
+.btn-danger {
+  background: linear-gradient(to right, #f44336, #c62828);
+}
+
+.btn-info {
+  background: linear-gradient(to right, #2196F3, #1565C0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .status-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 20px 15px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .error-code {
+    font-size: 4rem;
+  }
+}
